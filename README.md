@@ -1,0 +1,1 @@
+# Proyecto U3 completo — generado 2025-11-08T14:58:26.442088\n

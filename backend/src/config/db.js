@@ -1,0 +1,1 @@
+import { Sequelize } from 'sequelize'; import { config } from './appConfig.js'; export const sequelize = new Sequelize(config.databaseUrl,{logging:false}); export async function connectDb(){ await sequelize.authenticate(); console.log('✅ DB connected'); }

@@ -1,0 +1,25 @@
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Prácticas - Demo</title><link rel="stylesheet" href="styles.css"/>
+</head><body>
+<header><h1>Plataforma de Prácticas - Demo</h1><div id="status">Desconectado</div></header>
+<section class="card"><h2>Configuración</h2>
+<label>API Base URL <input id="apiUrl" value="http://localhost:4000/api"/></label>
+<button id="saveCfg">Guardar</button></section>
+<section class="grid">
+<div class="card"><h2>Login (Empresa)</h2>
+<label>Correo <input id="email" value="empresa@demo.com"/></label>
+<label>Contraseña <input id="password" type="password" value="demo1234"/></label>
+<button id="btnLogin">Iniciar sesión</button><pre id="loginOut"></pre></div>
+<div class="card"><h2>Crear Oferta (requiere token)</h2>
+<label>Título <input id="titulo"/></label>
+<label>Descripción <textarea id="descripcion"></textarea></label>
+<label>Tipo<select id="tipo"><option>Profesional</option><option>Técnica</option><option>Monitoría</option></select></label>
+<button id="btnCrear">Publicar oferta</button><pre id="crearOut"></pre></div>
+</section>
+<section class="card"><div class="row"><h2>Ofertas publicadas</h2><div class="actions">
+<button id="btnRefrescar">Refrescar</button><button id="btnExport">Exportar CSV</button></div></div>
+<table id="tabla"><thead><tr><th>ID</th><th>Título</th><th>Descripción</th><th>Tipo</th><th>Estado</th><th>Fecha</th></tr></thead><tbody></tbody></table>
+<pre id="listaOut"></pre></section>
+<footer><small>Demo Unidad 3 — Frontend ligero</small></footer>
+<script src="script.js"></script></body></html>

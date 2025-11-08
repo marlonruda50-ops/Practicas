@@ -1,0 +1,1 @@
+import { Router } from 'express'; import authRoutes from './auth.routes.js'; import ofertaRoutes from './oferta.routes.js'; import postulacionRoutes from './postulacion.routes.js'; const r=Router(); r.use('/auth',authRoutes); r.use('/ofertas',ofertaRoutes); r.use('/postulaciones',postulacionRoutes); export default r; 

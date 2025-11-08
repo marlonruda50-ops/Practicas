@@ -1,0 +1,1 @@
+import jwt from 'jsonwebtoken'; import { config } from '../config/appConfig.js'; export const signJwt=(pl)=>jwt.sign(pl,config.jwtSecret,{expiresIn:config.jwtExpiresIn}); export const verifyJwt=(t)=>jwt.verify(t,config.jwtSecret);

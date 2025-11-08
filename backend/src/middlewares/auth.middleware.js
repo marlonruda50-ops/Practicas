@@ -1,0 +1,1 @@
+import { verifyJwt } from '../utils/jwt.utils.js'; export function auth(req,res,next){ const h=req.headers.authorization||''; const t=h.startsWith('Bearer ')?h.slice(7):null; if(!t) return res.status(401).json({message:'No token provided'}); try{ req.user=verifyJwt(t); next(); }catch{ return res.status(401).json({message:'Invalid or expired token'});} }

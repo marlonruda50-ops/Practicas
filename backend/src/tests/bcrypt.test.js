@@ -1,0 +1,1 @@
+import { hash, compare } from '../utils/bcrypt.utils.js'; test('hash/compare', async()=>{ const h=await hash('demo1234'); expect(h).toMatch(/\$2a\$|\$2b\$/); const ok=await compare('demo1234',h); expect(ok).toBe(true); });

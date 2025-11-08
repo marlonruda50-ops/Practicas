@@ -1,0 +1,1 @@
+import request from 'supertest'; import app from '../server.js'; test('GET /api ok', async()=>{ const r=await request(app).get('/api'); expect(r.statusCode).toBe(200); expect(r.body.ok).toBe(true); });
