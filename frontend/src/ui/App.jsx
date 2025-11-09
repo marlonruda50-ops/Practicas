@@ -7,7 +7,11 @@ import OfertasList from './OfertasList.jsx'
 import OfertaNueva from './OfertaNueva.jsx'
 import MisPostulaciones from './MisPostulaciones.jsx'
 
-export const apiBase = localStorage.getItem('apiBase') || 'http://localhost:4000/api'
+export const apiBase =
+  localStorage.getItem('apiBase') ||
+  import.meta.env.VITE_API_URL + '/api' ||
+  'http://localhost:4000/api';
+
 
 export default function App(){
   const [token,setToken] = React.useState(localStorage.getItem('token')||'')
