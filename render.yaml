@@ -32,4 +32,3 @@ services:
 databases:
   - name: practicas-db
     plan: free
-
